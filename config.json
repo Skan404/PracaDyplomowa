@@ -1,0 +1,17 @@
+{
+  "Lofi": {
+    "target_bpm": 100,
+    "target_key": "E maj",
+    "full_prompt": "Relaxing lofi with piano, e-major, 100 bpm, 100 seconds"
+  },
+  "Techno": {
+    "target_bpm": 140,
+    "target_key": "E min",
+    "full_prompt": "Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds"
+  },
+  "Film music": {
+    "target_bpm": 80,
+    "target_key": "F min",
+    "full_prompt": "Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds"
+  }
+}
