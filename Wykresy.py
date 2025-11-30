@@ -2,9 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from math import pi
+import seaborn as sns
 
 COLORS_LIKERT = ["#B8DAED", "#8dc2e6", "#6cafee", "#5097DD", "#226cc0ff"]
 COLORS_APPS = ['#1f78b4', '#33a02c', '#e31a1c', '#ff7f00']
+COLORS_SCENARIOS = ['#ff9999', '#66b3ff', '#99ff99']
 
 def load_data(filepath):
     return pd.read_csv(filepath)
@@ -132,15 +134,58 @@ def plot_correlation_heatmap(df_metrics):
     plt.tight_layout()
     plt.show()
 
+def plot_scenario_heatmap(df):
+    data = {} 
+    
+    for col in df.columns[1:]:
+        parts = col.split(';')
+        if len(parts) != 3:
+            continue
+            
+        _, scenario, criterion = parts
+        key = (scenario, criterion)
+        
+        if key not in data:
+            data[key] = {'weighted_sum': 0, 'count': 0}
+            
+        weighted_sum = (df['Ocena'] * df[col]).sum()
+        total_count = df[col].sum()
+        
+        data[key]['weighted_sum'] += weighted_sum
+        data[key]['count'] += total_count
+        
+    rows = []
+    for (scenario, criterion), values in data.items():
+        mean = values['weighted_sum'] / values['count'] if values['count'] > 0 else 0
+        rows.append({'Scenariusz': scenario, 'Kryterium': criterion, 'Srednia': mean})
+        
+    df_means = pd.DataFrame(rows)
+    
+    heatmap_data = df_means.pivot(index='Kryterium', columns='Scenariusz', values='Srednia')
+    
+    idx = [c for c in heatmap_data.index if c != 'Ocena ogólna'] + ['Ocena ogólna']
+    heatmap_data = heatmap_data.reindex(idx)
+    
+    plt.figure(figsize=(8, 8))
+    sns.heatmap(heatmap_data, annot=True, fmt=".2f", cmap="RdYlGn", vmin=1, vmax=5, 
+                linewidths=.5, cbar_kws={'label': 'Średnia ocena'})
+    
+    plt.title('Szczegółowa ocena scenariuszy')
+    plt.xlabel('Scenariusz')
+    plt.ylabel('Kryterium')
+    plt.tight_layout()
+    plt.show()
+
 def main():
     file_path = 'Wyniki.csv'
     df = load_data(file_path)
     df_metrics = get_detailed_metrics(df)
     
-    plot_global_pie_chart(df)
-    plot_stacked_bar_chart(df)
-    plot_radar_chart(df_metrics)
-    plot_correlation_heatmap(df_metrics)
+    # plot_global_pie_chart(df)
+    # plot_stacked_bar_chart(df)
+    # plot_radar_chart(df_metrics)
+    # plot_correlation_heatmap(df_metrics)
+    plot_scenario_heatmap(df)
 
 if __name__ == "__main__":
     main()
