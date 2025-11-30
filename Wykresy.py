@@ -176,16 +176,84 @@ def plot_scenario_heatmap(df):
     plt.tight_layout()
     plt.show()
 
+def get_track_rankings_summary(df):
+    COLORS_HIGH = '#33a02c'
+    COLORS_LOW = '#e31a1c'
+    COLORS_MID = '#1f78b4'
+
+    tracks_data = {} 
+    
+    # Agregacja wszystkich kryteriów dla każdego utworu (App + Scenario)
+    for col in df.columns[1:]:
+        parts = col.split(';')
+        if len(parts) != 3:
+            continue
+        app, scenario, criterion = parts
+        
+        key = (app, scenario)
+        if key not in tracks_data:
+            tracks_data[key] = {'weighted_sum': 0, 'count': 0}
+            
+        weighted_sum = (df['Ocena'] * df[col]).sum()
+        total_count = df[col].sum()
+        
+        tracks_data[key]['weighted_sum'] += weighted_sum
+        tracks_data[key]['count'] += total_count
+    
+    tracks_list = []
+    for (app, scenario), data in tracks_data.items():
+        mean_score = data['weighted_sum'] / data['count'] if data['count'] > 0 else 0
+        tracks_list.append({
+            'Track': f"{app}\n({scenario})",
+            'App': app,
+            'Scenario': scenario,
+            'Srednia': mean_score
+        })
+        
+    df_tracks = pd.DataFrame(tracks_list)
+    df_sorted = df_tracks.sort_values(by='Srednia', ascending=False).reset_index(drop=True)
+    
+    colors = []
+    for i in range(len(df_sorted)):
+        if i < 1:
+            colors.append(COLORS_HIGH)
+        elif i >= len(df_sorted) - 1:
+            colors.append(COLORS_LOW)
+        else:
+            colors.append(COLORS_MID)
+    df_sorted['Color'] = colors
+    
+    return df_sorted
+
+def plot_track_ranking(df_tracks):
+    plt.figure(figsize=(10, 8))
+    
+    ax = sns.barplot(x='Srednia', y='Track', data=df_tracks, palette=df_tracks['Color'].tolist())
+    
+    plt.title('Ranking utworów (średnia ze wszystkich kryteriów)')
+    plt.xlabel('Średnia ocena')
+    plt.ylabel('')
+    
+    for i, v in enumerate(df_tracks['Srednia']):
+        ax.text(v + 0.05, i, f"{v:.2f}", color='black', va='center', fontweight='bold')
+        
+    plt.xlim(0, 5.0)
+    plt.axvline(x=3.0, color='grey', linestyle='--', alpha=0.5)
+    plt.tight_layout()
+    plt.show()
+
 def main():
     file_path = 'Wyniki.csv'
     df = load_data(file_path)
     df_metrics = get_detailed_metrics(df)
+    df_tracks = get_track_rankings_summary(df)
     
     # plot_global_pie_chart(df)
     # plot_stacked_bar_chart(df)
     # plot_radar_chart(df_metrics)
     # plot_correlation_heatmap(df_metrics)
-    plot_scenario_heatmap(df)
+    # plot_scenario_heatmap(df)
+    plot_track_ranking(df_tracks)
 
 if __name__ == "__main__":
     main()
