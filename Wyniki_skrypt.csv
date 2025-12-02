@@ -1,0 +1,61 @@
+Model,Prompt (Scenariusz),Nazwa Pliku,Ocena Długość (0-2),Ocena Tempo (0-2),Ocena Tonacja (0-2),Ocena Głośność (0-2),Ocena Szczyt (0-2),Ocena Dynamika (0-2),Ocena Stereo (0-2),SUMA (0-14),Ścieżka
+ACE-Step,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample1.wav,2,1,0,1,1,2,2,9,samples\ACE-Step\Film music\Sample1.wav
+ACE-Step,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample2.wav,2,1,0,1,1,2,2,9,samples\ACE-Step\Film music\Sample2.wav
+ACE-Step,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample3.wav,2,2,0,2,1,2,2,11,samples\ACE-Step\Film music\Sample3.wav
+ACE-Step,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample4.wav,2,2,0,2,1,2,2,11,samples\ACE-Step\Film music\Sample4.wav
+ACE-Step,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample5.wav,2,2,0,2,1,2,2,11,samples\ACE-Step\Film music\Sample5.wav
+ACE-Step,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample1.wav,2,0,1,2,1,2,2,10,samples\ACE-Step\Lofi\Sample1.wav
+ACE-Step,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample2.wav,2,0,0,2,1,2,2,9,samples\ACE-Step\Lofi\Sample2.wav
+ACE-Step,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample3.wav,2,2,0,2,1,2,2,11,samples\ACE-Step\Lofi\Sample3.wav
+ACE-Step,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample4.wav,2,0,0,2,1,2,2,9,samples\ACE-Step\Lofi\Sample4.wav
+ACE-Step,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample5.wav,2,0,0,1,1,2,2,8,samples\ACE-Step\Lofi\Sample5.wav
+ACE-Step,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample1.wav,2,1,0,1,1,2,2,9,samples\ACE-Step\Techno\Sample1.wav
+ACE-Step,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample2.wav,2,0,0,1,1,2,2,8,samples\ACE-Step\Techno\Sample2.wav
+ACE-Step,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample3.wav,2,0,0,1,1,2,2,8,samples\ACE-Step\Techno\Sample3.wav
+ACE-Step,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample4.wav,2,0,0,1,2,2,2,9,samples\ACE-Step\Techno\Sample4.wav
+ACE-Step,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample5.wav,2,0,0,2,1,2,2,9,samples\ACE-Step\Techno\Sample5.wav
+DiffRhythm,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample1.wav,2,2,1,2,1,2,2,12,samples\DiffRhythm\Film music\Sample1.wav
+DiffRhythm,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample2.wav,2,1,0,2,1,2,2,10,samples\DiffRhythm\Film music\Sample2.wav
+DiffRhythm,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample3.wav,2,2,0,2,1,2,2,11,samples\DiffRhythm\Film music\Sample3.wav
+DiffRhythm,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample4.wav,2,2,0,2,1,2,2,11,samples\DiffRhythm\Film music\Sample4.wav
+DiffRhythm,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample5.wav,2,2,0,2,1,2,2,11,samples\DiffRhythm\Film music\Sample5.wav
+DiffRhythm,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample1.wav,2,2,1,1,1,2,2,11,samples\DiffRhythm\Lofi\Sample1.wav
+DiffRhythm,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample2.wav,2,0,0,2,1,2,2,9,samples\DiffRhythm\Lofi\Sample2.wav
+DiffRhythm,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample3.wav,2,2,0,2,1,2,2,11,samples\DiffRhythm\Lofi\Sample3.wav
+DiffRhythm,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample4.wav,2,2,0,2,1,2,2,11,samples\DiffRhythm\Lofi\Sample4.wav
+DiffRhythm,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample5.wav,2,2,0,1,1,1,1,8,samples\DiffRhythm\Lofi\Sample5.wav
+DiffRhythm,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample1.wav,2,2,0,1,1,2,2,10,samples\DiffRhythm\Techno\Sample1.wav
+DiffRhythm,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample2.wav,2,0,0,2,1,2,2,9,samples\DiffRhythm\Techno\Sample2.wav
+DiffRhythm,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample3.wav,2,2,0,2,1,2,2,11,samples\DiffRhythm\Techno\Sample3.wav
+DiffRhythm,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample4.wav,2,2,0,1,1,2,1,9,samples\DiffRhythm\Techno\Sample4.wav
+DiffRhythm,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample5.wav,2,2,0,2,1,2,2,11,samples\DiffRhythm\Techno\Sample5.wav
+Stable Audio,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample1.wav,2,2,2,2,1,2,2,13,samples\Stable Audio\Film music\Sample1.wav
+Stable Audio,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample2.wav,2,2,1,2,1,2,2,12,samples\Stable Audio\Film music\Sample2.wav
+Stable Audio,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample3.wav,2,2,2,2,2,2,2,14,samples\Stable Audio\Film music\Sample3.wav
+Stable Audio,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample4.wav,2,2,2,2,2,2,2,14,samples\Stable Audio\Film music\Sample4.wav
+Stable Audio,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample5.wav,2,1,1,2,2,2,2,12,samples\Stable Audio\Film music\Sample5.wav
+Stable Audio,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample1.wav,2,0,1,2,1,2,2,10,samples\Stable Audio\Lofi\Sample1.wav
+Stable Audio,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample2.wav,2,2,1,2,1,2,2,12,samples\Stable Audio\Lofi\Sample2.wav
+Stable Audio,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample3.wav,2,2,1,2,1,2,1,11,samples\Stable Audio\Lofi\Sample3.wav
+Stable Audio,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample4.wav,2,2,1,2,1,2,2,12,samples\Stable Audio\Lofi\Sample4.wav
+Stable Audio,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample5.wav,2,2,1,2,1,2,2,12,samples\Stable Audio\Lofi\Sample5.wav
+Stable Audio,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample1.wav,2,2,0,2,2,2,1,11,samples\Stable Audio\Techno\Sample1.wav
+Stable Audio,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample2.wav,2,2,0,2,2,2,2,12,samples\Stable Audio\Techno\Sample2.wav
+Stable Audio,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample3.wav,2,2,0,2,2,2,1,11,samples\Stable Audio\Techno\Sample3.wav
+Stable Audio,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample4.wav,2,2,0,2,2,2,1,11,samples\Stable Audio\Techno\Sample4.wav
+Stable Audio,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample5.wav,2,2,0,2,2,2,1,11,samples\Stable Audio\Techno\Sample5.wav
+SunoAI,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample1.wav,1,0,2,1,2,2,2,10,samples\SunoAI\Film music\Sample1.wav
+SunoAI,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample2.wav,0,0,2,2,2,2,2,10,samples\SunoAI\Film music\Sample2.wav
+SunoAI,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample3.wav,0,1,1,1,2,2,2,9,samples\SunoAI\Film music\Sample3.wav
+SunoAI,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample4.wav,0,0,2,1,2,2,2,9,samples\SunoAI\Film music\Sample4.wav
+SunoAI,"Pathetic film music for orchestra, without choir, f-minor, 80 bpm, 100 seconds",Sample5.wav,0,0,1,1,2,2,2,8,samples\SunoAI\Film music\Sample5.wav
+SunoAI,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample1.wav,1,1,2,1,2,2,2,11,samples\SunoAI\Lofi\Sample1.wav
+SunoAI,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample2.wav,2,0,2,1,2,2,2,11,samples\SunoAI\Lofi\Sample2.wav
+SunoAI,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample3.wav,1,1,2,1,2,2,2,11,samples\SunoAI\Lofi\Sample3.wav
+SunoAI,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample4.wav,0,1,2,1,2,2,2,10,samples\SunoAI\Lofi\Sample4.wav
+SunoAI,"Relaxing lofi with piano, e-major, 100 bpm, 100 seconds",Sample5.wav,2,1,2,1,2,2,2,12,samples\SunoAI\Lofi\Sample5.wav
+SunoAI,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample1.wav,0,0,1,2,2,2,2,9,samples\SunoAI\Techno\Sample1.wav
+SunoAI,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample2.wav,0,0,0,1,2,2,1,6,samples\SunoAI\Techno\Sample2.wav
+SunoAI,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample3.wav,0,0,0,1,2,2,2,7,samples\SunoAI\Techno\Sample3.wav
+SunoAI,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample4.wav,0,0,1,1,2,2,1,7,samples\SunoAI\Techno\Sample4.wav
+SunoAI,"Energetic techno, synthesizer, e-minor, 140 bpm, 100 seconds",Sample5.wav,0,1,0,1,2,2,2,8,samples\SunoAI\Techno\Sample5.wav
