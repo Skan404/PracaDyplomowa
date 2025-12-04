@@ -28,20 +28,28 @@ def analyze_and_plot(df):
     plt.show()
 
     # --- Ranking slupkowy ---
+    df_stats = df.groupby('Model')['SUMA (0-14)'].agg(['mean', 'std'])
+    df_stats = df_stats.sort_values(by='mean', ascending=False)
+
     plt.figure(figsize=(8, 6))
-    ax = df_total.plot(kind='bar', color='#4682B4', width=0.6)
+    ax = df_stats['mean'].plot(kind='bar', 
+                               yerr=df_stats['std'], 
+                               capsize=5, 
+                               color='#4682B4', 
+                               width=0.6,
+                               rot=0)
     
-    plt.title('Ranking ogólny spełnienia kryteriów ilościowych')
+    plt.title('Spełnienie kryteriów ilościowych (średnia i odchylenie standardowe)', fontsize=15)
     plt.ylabel('Średnia suma punktów')
     plt.xlabel('Model')
-    plt.ylim(0, 15)
+    plt.ylim(0, 16)
     plt.grid(axis='y', linestyle='--', alpha=0.5)
     plt.xticks(rotation=0)
     
     for p in ax.patches:
         ax.annotate(f'{p.get_height():.2f}', 
                     (p.get_x() + p.get_width() / 2., p.get_height()),
-                    ha='center', va='center', xytext=(0, 9), 
+                    ha='center', va='center', xytext=(19, 7), 
                     textcoords='offset points', fontweight='bold')
     
     plt.tight_layout()

@@ -35,10 +35,15 @@ def plot_global_pie_chart(df):
     counts = df.iloc[:, 1:].sum(axis=1)
     labels = df.iloc[:, 0]
     
-    plt.figure(figsize=(8, 8))
-    plt.pie(counts, labels=labels, autopct='%1.1f%%', colors=COLORS_LIKERT, startangle=140)
+    plt.figure(figsize=(4, 4))
+    plt.pie(counts, 
+            labels=labels, 
+            autopct='%1.1f%%', 
+            colors=COLORS_LIKERT, 
+            startangle=140,
+            textprops={'fontsize': 12})
     plt.axis('equal')
-    plt.title('Globalny rozkład ocen')
+    plt.title('Globalny rozkład ocen', fontsize=14, pad=20)
     plt.tight_layout()
     plt.show()
 
@@ -76,17 +81,20 @@ def plot_radar_chart(df_metrics):
     avg_scores = df_radar.groupby(['Aplikacja', 'Kryterium'])['Srednia'].mean().reset_index()
     
     categories = list(avg_scores['Kryterium'].unique())
+    categories.sort(reverse=True)
     N = len(categories)
     
     angles = [n / float(N) * 2 * pi for n in range(N)]
     angles += angles[:1]
     
-    plt.figure(figsize=(10, 10))
+    plt.figure(figsize=(8, 8))
     ax = plt.subplot(111, polar=True)
     
-    plt.xticks(angles[:-1], categories, color='grey', size=10)
-    ax.set_rlabel_position(0)
-    plt.yticks([1, 2, 3, 4, 5], ["1","2","3","4","5"], color="grey", size=7)
+    plt.xticks(angles[:-1], categories, color='black', size=14, fontweight='bold')
+    ax.tick_params(axis='x', pad=10)
+
+    ax.set_rlabel_position(30)
+    plt.yticks([1, 2, 3, 4, 5], ["1","2","3","4","5"], color="grey", size=10)
     plt.ylim(0, 5)
     
     apps = avg_scores['Aplikacja'].unique()
@@ -99,8 +107,8 @@ def plot_radar_chart(df_metrics):
         ax.plot(angles, values, linewidth=2, linestyle='solid', label=app, color=COLORS_APPS[i % len(COLORS_APPS)])
         ax.fill(angles, values, color=COLORS_APPS[i % len(COLORS_APPS)], alpha=0.1)
     
-    plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
-    plt.title('Profil jakościowy aplikacji (średnie)')
+    plt.legend(loc='upper right', bbox_to_anchor=(1, -0.1), ncol=len(apps), fontsize=11)
+    plt.title('Profil jakościowy aplikacji (średnie)', fontsize=20, pad=15)
     plt.tight_layout()
     plt.show()
 
